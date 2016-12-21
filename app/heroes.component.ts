@@ -11,12 +11,7 @@ import { OnInit } from '@angular/core';
         <span class="badge">{{hero.id}}</span> {{hero.name}}
       </li>
     </ul>
-    <div *ngIf="selectedHero">
-      <h2>
-        {{ selectedHero.name ! uppercase }} is my Hero
-      </h2>
-      <button>View Details</button>
-    </div>
+    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
   `,
   styles: [`
   .selected {
